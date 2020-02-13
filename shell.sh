@@ -3,8 +3,9 @@ echo "$1"
 names=""
 for ((i=1;i<=$#;i++))
 do
-  names=$names$i" "
+  names=${names}$i" "
 done
+echo "$names"
 mkdir static_code1
 IFS=' ' read -r -a array <<< "$names"
 for i in "${array[@]}"
