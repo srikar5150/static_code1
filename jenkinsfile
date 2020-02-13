@@ -12,7 +12,7 @@ pipeline
    }
    stage("static_analysis")
    {
-      step
+      steps
       {
         sh label: '', script: 'sh shell.sh $names'
        }
