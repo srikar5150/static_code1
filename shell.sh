@@ -1,5 +1,6 @@
 cd $JENKINS_HOME/workspace/$JOB_NAME
 echo "$1"
+echo "$2"
 names=""
 for ((i=1;i<=$#;i++))
 do
