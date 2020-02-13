@@ -4,7 +4,7 @@ echo "$2"
 names=""
 for ((i=1;i<=$#;i++))
 do
-  names=${names}"$""$i"" "
+  names=${names}""$""$i""" "
 done
 echo "$names"
 mkdir static_code1
