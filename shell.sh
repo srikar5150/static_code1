@@ -1,4 +1,5 @@
 cd $JENKINS_HOME/workspace/$JOB_NAME
+echo "$1"
 mkdir static_code1
 IFS=' ' read -r -a array <<< "$1"
 for i in "${array[@]}"
