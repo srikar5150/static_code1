@@ -27,6 +27,7 @@ do
 done
 export PATH=/usr/local/bin
 cd /Users/srikar.nallapu/.jenkins/workspace/$JOB_NAME/static_code1
-eslint  -f json -c $JENKINS_HOME/workspace/static_config.json  "./**" -o $JENKINS_HOME/workspace/$JOB_NAME/result.json || echo "lint failed but continiung the process"
+cp /Users/srikar.nallapu/.jenkins/workspace/$JOB_NAME/static_code1 /Users/srikar.nallapu/.jenkins/workspace/output123
+eslint  -f json -c $JENKINS_HOME/workspace/static_config.json /Users/srikar.nallapu/.jenkins/workspace/output123  -o $JENKINS_HOME/workspace/$JOB_NAME/result.json || echo "lint failed but continiung the process"
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 npm install request
