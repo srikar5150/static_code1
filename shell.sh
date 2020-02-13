@@ -1,7 +1,7 @@
 cd $JENKINS_HOME/workspace/$JOB_NAME
 echo "$1"
 echo "$2"
-names="'$*'"
+names="$*"
 echo "$names"
 mkdir static_code1
 IFS=' ' read -r -a array <<< "$names"
