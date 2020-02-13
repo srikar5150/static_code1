@@ -3,7 +3,7 @@ echo "$1"
 names=""
 for ((i=1;i<=$#;i++))
 do
-  names=$names"$i"" "
+  names=$names$i" "
 done
 mkdir static_code1
 IFS=' ' read -r -a array <<< "$names"
