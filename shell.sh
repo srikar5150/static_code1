@@ -1,7 +1,12 @@
 cd $JENKINS_HOME/workspace/$JOB_NAME
 echo "$1"
+names=""
+for(i=1;i<="$#";i++)
+do
+  names=$names"$i"" "
+done
 mkdir static_code1
-IFS=' ' read -r -a array <<< "$1"
+IFS=' ' read -r -a array <<< "$names"
 for i in "${array[@]}"
 do
   	IFS='/' read -r -a array1 <<< "$i"
