@@ -33,6 +33,6 @@ mkdir $JOB_NAME
 cd $JOB_NAME
 cp -R /Users/srikar.nallapu/.jenkins/workspace/output123 ./static_code1
 export PATH=/usr/local/bin
-eslint  -f json -c ./static_config.json './**'  -o $JENKINS_HOME/workspace/$JOB_NAME/result.json || echo "lint failed but continiung the process"
+eslint  -f json -c /Users/srikar.nallapu/.jenkins/workspace/static_config.json './**'  -o $JENKINS_HOME/workspace/$JOB_NAME/result.json || echo "lint failed but continiung the process"
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 npm install request
