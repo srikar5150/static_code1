@@ -5,6 +5,7 @@
         "node": true,
         "browser": true
     },
+    "files": ["static_code1/*.jsx/*.js"],
     "extends": "eslint:recommended",
     "parserOptions": {
         "ecmaVersion": 6,
