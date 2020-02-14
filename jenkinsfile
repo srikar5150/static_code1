@@ -17,6 +17,10 @@ pipeline
         echo "$names"
         sh label: '', script: 'sh shell.sh $names'
        }
+       steps
+       {
+         
+       }
    }
   }
 }
