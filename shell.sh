@@ -1,3 +1,4 @@
+rm -rf $JENKINS_HOME/workspace/$JOB_NAME
 cd $JENKINS_HOME/workspace/$JOB_NAME
 names="$*"
 echo "$names"
