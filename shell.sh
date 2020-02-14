@@ -26,12 +26,6 @@ do
 	done 
 done
 cd /Users/srikar.nallapu/.jenkins/workspace/$JOB_NAME/
-cp -R /Users/srikar.nallapu/.jenkins/workspace/$JOB_NAME/static_code1 /Users/srikar.nallapu/.jenkins/workspace/output123
-cd /Users/srikar.nallapu/.jenkins/workspace/
-rm -rf $JOB_NAME
-mkdir $JOB_NAME
-cd $JOB_NAME
-cp -R /Users/srikar.nallapu/.jenkins/workspace/output123 ./static_code1
 export PATH=/usr/local/bin
 eslint  -f json -c /Users/srikar.nallapu/.jenkins/workspace/static_config.json './**'  -o $JENKINS_HOME/workspace/$JOB_NAME/result.json || echo "lint failed but continiung the process"
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
