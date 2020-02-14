@@ -14,7 +14,7 @@
     {
       "files": [ "static_code1/**/*.js" ]
         
-    }
+    }]
     "rules": {
         "constructor-super" : 2,
         "default-case" : 2,
