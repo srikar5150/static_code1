@@ -17,7 +17,7 @@ pipeline
         echo "$names"
         sh label: '', script: 'sh shell.sh $names'
         sh label: '', script: 'cd /Users/srikar.nallapu/.jenkins/workspace/$JOB_NAME/static_code1'
-        sh label: '', script: '''export PATH=/usr/local/bin
+        sh label: '', script: '''export PATH=/usr/local/lib/node_modules/npm
 '''
         sh label: '', script: '''eslint  -f json -c /Users/srikar.nallapu/.jenkins/workspace/static_config.json \'./**\'  -o $JENKINS_HOME/workspace/$JOB_NAME/result.json || echo "lint failed but continiung the process"
 '''
