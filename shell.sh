@@ -1,6 +1,4 @@
 cd $JENKINS_HOME/workspace/$JOB_NAME
-echo "$1"
-echo "$2"
 names="$*"
 echo "$names"
 mkdir static_code1
@@ -11,7 +9,7 @@ do
 	path=""
 	p="/"
 	temp=${#array1[@]}
-	temp=$temp-1
+	temp=$((temp-1))
 	for index in "${!array1[@]}"
 	do
    		if [ $index == $temp ]
@@ -25,8 +23,8 @@ do
    
 	done 
 done
-cd /Users/srikar.nallapu/.jenkins/workspace/$JOB_NAME/
+cd $JENKINS_HOME/workspace/$JOB_NAME/
 export PATH=/usr/local/bin
-eslint  -f json -c /Users/srikar.nallapu/.jenkins/workspace/static_config.json './**'  -o $JENKINS_HOME/workspace/$JOB_NAME/result.json || echo "lint failed but continiung the process"
+eslint  -f json -c $JENKINS_HOME/workspace/static_config.json static_code1/*  -o $JENKINS_HOME/workspace/$JOB_NAME/result.json || echo "lint failed but continiung the process"
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 npm install request
