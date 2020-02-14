@@ -22,7 +22,8 @@ pipeline
        {
          nodejs('recent node') 
           {
-            eslint  -f json -c /Users/srikar.nallapu/.jenkins/workspace/static_config.json './**'  -o $JENKINS_HOME/workspace/$JOB_NAME/result.json || echo "lint failed but continiung the process"
+              sh label: '', script: '''eslint  -f json -c /Users/srikar.nallapu/.jenkins/workspace/static_config.json \'./**\'  -o $JENKINS_HOME/workspace/$JOB_NAME/result.json || echo "lint failed but continiung the process"
+'''
            }    
        }
    }
