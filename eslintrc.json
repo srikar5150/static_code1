@@ -10,9 +10,6 @@
         "ecmaVersion": 6,
         "sourceType": "module"
     },
-    "overrides": [
-    {
-      "files": [ "static_code1/**/*.js" ],
     "rules": {
         "constructor-super" : 2,
         "default-case" : 2,
@@ -52,5 +49,5 @@
         "use-isnan" : 2,
         "valid-typeof" : 1
     }
-    }]
+    
 }
