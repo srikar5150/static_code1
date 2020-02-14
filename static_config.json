@@ -12,9 +12,7 @@
     },
     "overrides": 
     {
-      "files": [ "static_code1/**/*.js" ]
-        
-    }
+      "files": [ "static_code1/**/*.js" ],
     "rules": {
         "constructor-super" : 2,
         "default-case" : 2,
@@ -53,5 +51,6 @@
         "semi" : 2,
         "use-isnan" : 2,
         "valid-typeof" : 1
+    }
     }
 }
